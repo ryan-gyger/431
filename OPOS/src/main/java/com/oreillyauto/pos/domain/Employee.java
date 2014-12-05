@@ -1,5 +1,7 @@
 package com.oreillyauto.pos.domain;
 
+import com.oreillyauto.pos.dao.OrdDao;
+
 public class Employee {
 	private int empId;
 	private String empName;
@@ -50,4 +52,9 @@ public class Employee {
 
 	}
 
+	public Order newOrder() {
+		OrdDao ordDao = new OrdDao();
+		Order order = ordDao.newOrd();
+		return order;
+	}
 }
