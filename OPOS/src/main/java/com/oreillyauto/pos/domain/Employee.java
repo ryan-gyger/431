@@ -1,8 +1,15 @@
 package com.oreillyauto.pos.domain;
 
+import java.io.Serializable;
+
 import com.oreillyauto.pos.dao.OrdDao;
 
-public class Employee {
+public class Employee implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5085137550007509011L;
+
 	private int empId;
 	private String empName;
 	private String empPhone;
